@@ -1,0 +1,1236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Internet Basics | Digital Pathshala</title>
+
+    <meta name="description"
+          content="Learn internet basics, web browsers, search engines, email and online safety.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* Internet Page Hero */
+        .internet-hero {
+            background: linear-gradient(135deg, #eaf5ff, #e8f8ee);
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .internet-hero .breadcrumb {
+            margin-bottom: 18px;
+            color: #1768b3;
+            font-size: 14px;
+        }
+
+        .internet-hero h1 {
+            color: #163e65;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .internet-hero h1 span {
+            color: #218344;
+        }
+
+        .internet-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #52677c;
+            line-height: 1.8;
+        }
+
+        /* Main Wrapper */
+        .internet-wrapper {
+            max-width: 1150px;
+            margin: auto;
+            padding: 55px 20px;
+        }
+
+        .internet-section {
+            margin-bottom: 55px;
+        }
+
+        .internet-heading {
+            font-size: 28px;
+            color: #163e65;
+            margin-bottom: 12px;
+        }
+
+        .internet-description {
+            color: #60758a;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        /* Introduction */
+        .internet-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .internet-intro p {
+            color: #60758a;
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
+
+        .internet-intro img {
+            width: 100%;
+            border-radius: 18px;
+        }
+
+        /* Information Cards */
+        .internet-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 25px;
+        }
+
+        .internet-card {
+            padding: 25px 20px;
+            border: 1px solid #edf1f5;
+            border-radius: 15px;
+            background: #ffffff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .internet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .internet-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .internet-card h3 {
+            color: #163e65;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .internet-card p {
+            color: #60758a;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Example Box */
+        .internet-example {
+            background: #eaf5ff;
+            border-left: 4px solid #1768b3;
+            padding: 16px;
+            margin-top: 15px;
+            border-radius: 8px;
+            color: #245078;
+            line-height: 1.7;
+        }
+
+        /* Browser Section */
+        .browser-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .browser-card {
+            background: #f5f9fd;
+            padding: 22px 12px;
+            text-align: center;
+            border-radius: 14px;
+            border: 1px solid #e8eff7;
+        }
+
+        .browser-card .browser-icon {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .browser-card h3 {
+            color: #163e65;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .browser-card p {
+            color: #60758a;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* Online Process */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .process-card {
+            background: #f5f9fd;
+            border-radius: 14px;
+            padding: 20px 12px;
+            text-align: center;
+        }
+
+        .process-card .process-icon {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .process-card h3 {
+            color: #163e65;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .process-card p {
+            color: #60758a;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* Safety Section */
+        .safety-section {
+            background: #fff7e8;
+            border-radius: 18px;
+            padding: 30px;
+        }
+
+        .safety-section h2 {
+            color: #9a5b0a;
+            font-size: 27px;
+            margin-bottom: 12px;
+        }
+
+        .safety-section > p {
+            color: #755b38;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .safety-card {
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 12px;
+            display: flex;
+            gap: 13px;
+            align-items: flex-start;
+        }
+
+        .safety-card span {
+            font-size: 27px;
+        }
+
+        .safety-card h3 {
+            color: #163e65;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .safety-card p {
+            color: #60758a;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* Internet Activity */
+        .activity-box {
+            background: linear-gradient(135deg, #f0f7ff, #effbf2);
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .activity-box h2 {
+            color: #163e65;
+            margin-bottom: 12px;
+        }
+
+        .activity-box > p {
+            color: #60758a;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .activity-question {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            color: #163e65;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .activity-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .activity-option {
+            background: #ffffff;
+            color: #1768b3;
+            border: 2px solid #d7e8f8;
+            padding: 14px;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .activity-option:hover:not(:disabled) {
+            background: #eaf5ff;
+            border-color: #1768b3;
+        }
+
+        .activity-option.correct {
+            background: #e8f8ee;
+            border-color: #218344;
+            color: #218344;
+        }
+
+        .activity-option.incorrect {
+            background: #ffeded;
+            border-color: #d64545;
+            color: #c0392b;
+        }
+
+        .activity-option:disabled {
+            cursor: default;
+        }
+
+        .activity-result {
+            margin: 18px 0;
+            min-height: 25px;
+            font-weight: 600;
+        }
+
+        .activity-btn {
+            background: #1768b3;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .activity-btn:hover {
+            background: #104d88;
+        }
+
+        /* Learning Tip */
+        .internet-tip {
+            background: #e8f8ee;
+            border-left: 5px solid #218344;
+            padding: 22px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .internet-tip h3 {
+            color: #218344;
+            margin-bottom: 8px;
+        }
+
+        .internet-tip p {
+            color: #52677c;
+            line-height: 1.8;
+        }
+
+        /* Page Navigation */
+        .lesson-navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .lesson-navigation a {
+            display: inline-block;
+            background: #1768b3;
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .lesson-navigation a:hover {
+            background: #104d88;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 800px) {
+            .internet-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .browser-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+            .internet-hero {
+                padding: 45px 20px;
+            }
+
+            .internet-hero h1 {
+                font-size: 32px;
+            }
+
+            .internet-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .internet-heading {
+                font-size: 24px;
+            }
+
+            .safety-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .activity-options {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson-navigation {
+                flex-direction: column;
+            }
+
+            .lesson-navigation a {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .internet-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .browser-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .safety-section {
+                padding: 20px 15px;
+            }
+
+            .activity-box {
+                padding: 22px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">💻</span>
+                <span>Digital<span class="logo-highlight">Pathshala</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#lessons">Lessons</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="files.html">File Lab</a></li>
+                <li><a href="fake-messages.html">Spot Fakes</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="progress.html">Certificate</a></li>
+            </ul>
+
+            <a href="../index.html#lessons" class="nav-button">
+                All Lessons →
+            </a>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="internet-hero">
+
+        <div class="breadcrumb">
+            <a href="../index.html" style="color:#1768b3;">Home</a>
+            / Internet Basics
+        </div>
+
+        <h1>🌐 Internet <span>Basics</span></h1>
+
+        <p>
+            Discover the world of the internet!
+            Learn about websites, browsers, search engines,
+            email and how to stay safe online.
+        </p>
+
+    </section>
+
+
+    <!-- Main Content -->
+    <main class="internet-wrapper">
+
+
+        <!-- Introduction -->
+        <section class="internet-section">
+
+            <div class="internet-intro">
+
+                <div>
+                    <h2 class="internet-heading">
+                        🌍 What is the Internet?
+                    </h2>
+
+                    <p>
+                        The internet is a worldwide network
+                        that connects computers, mobile phones
+                        and other devices so they can share
+                        information.
+                    </p>
+
+                    <p>
+                        We use the internet to learn new things,
+                        watch educational videos, communicate
+                        with people and find information.
+                    </p>
+
+                    <div class="internet-example">
+                        <strong>Example:</strong>
+                        Students can use the internet to
+                        search for information about science,
+                        mathematics, history and other subjects.
+                    </div>
+                </div>
+
+                <div>
+                    <img
+                        src="https://img.magnific.com/free-vector/internet-communication_24877-51936.jpg?semt=ais_hybrid&w=740&q=80"
+                        alt="Internet learning illustration">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Uses of Internet -->
+        <section class="internet-section">
+
+            <h2 class="internet-heading">
+                💡 Uses of the Internet
+            </h2>
+
+            <p class="internet-description">
+                The internet helps us in many different
+                areas of our daily lives.
+            </p>
+
+            <div class="internet-grid">
+
+                <div class="internet-card">
+                    <div class="internet-icon">📚</div>
+                    <h3>Online Education</h3>
+                    <p>
+                        Learn new topics, read e-books
+                        and watch educational videos.
+                    </p>
+                </div>
+
+                <div class="internet-card">
+                    <div class="internet-icon">📧</div>
+                    <h3>Communication</h3>
+                    <p>
+                        Send emails, messages and
+                        communicate with others online.
+                    </p>
+                </div>
+
+                <div class="internet-card">
+                    <div class="internet-icon">🔍</div>
+                    <h3>Finding Information</h3>
+                    <p>
+                        Search for information about
+                        different topics and subjects.
+                    </p>
+                </div>
+
+                <div class="internet-card">
+                    <div class="internet-icon">🎥</div>
+                    <h3>Watching Videos</h3>
+                    <p>
+                        Watch educational videos,
+                        tutorials and documentaries.
+                    </p>
+                </div>
+
+                <div class="internet-card">
+                    <div class="internet-icon">💼</div>
+                    <h3>Online Services</h3>
+                    <p>
+                        Access useful public services,
+                        forms and other online resources.
+                    </p>
+                </div>
+
+                <div class="internet-card">
+                    <div class="internet-icon">🗺️</div>
+                    <h3>Maps & Directions</h3>
+                    <p>
+                        Find places, explore maps
+                        and understand directions.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Web Browsers -->
+        <section class="internet-section">
+
+            <h2 class="internet-heading">
+                🌐 What is a Web Browser?
+            </h2>
+
+            <p class="internet-description">
+                A web browser is a software application
+                that helps us open and view websites
+                on the internet.
+            </p>
+
+            <div class="browser-grid">
+
+                <div class="browser-card">
+                    <div class="browser-icon">🌐</div>
+                    <h3>Google Chrome</h3>
+                    <p>
+                        A popular browser
+                        used to visit websites.
+                    </p>
+                </div>
+
+                <div class="browser-card">
+                    <div class="browser-icon">🦊</div>
+                    <h3>Mozilla Firefox</h3>
+                    <p>
+                        A web browser for
+                        accessing websites.
+                    </p>
+                </div>
+
+                <div class="browser-card">
+                    <div class="browser-icon">🌊</div>
+                    <h3>Microsoft Edge</h3>
+                    <p>
+                        A browser developed
+                        by Microsoft.
+                    </p>
+                </div>
+
+                <div class="browser-card">
+                    <div class="browser-icon">🧭</div>
+                    <h3>Safari</h3>
+                    <p>
+                        A web browser commonly
+                        used on Apple devices.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="internet-example">
+                <strong>Remember:</strong>
+                A web browser is an application
+                used to visit websites.
+                A search engine is a service
+                used to find information online.
+            </div>
+
+        </section>
+
+
+        <!-- Search Engines -->
+        <section class="internet-section">
+
+            <h2 class="internet-heading">
+                🔎 What is a Search Engine?
+            </h2>
+
+            <p class="internet-description">
+                A search engine helps us find information
+                on the internet by entering words
+                or questions into a search box.
+            </p>
+
+            <div class="internet-grid">
+
+                <div class="internet-card">
+                    <div class="internet-icon">🔍</div>
+                    <h3>Google</h3>
+                    <p>
+                        Helps people find websites,
+                        images, videos and information.
+                    </p>
+                </div>
+
+                <div class="internet-card">
+                    <div class="internet-icon">🅱️</div>
+                    <h3>Bing</h3>
+                    <p>
+                        A search engine that
+                        helps users discover information.
+                    </p>
+                </div>
+
+                <div class="internet-card">
+                    <div class="internet-icon">🦆</div>
+                    <h3>DuckDuckGo</h3>
+                    <p>
+                        A search engine with
+                        a focus on user privacy.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- How to Search -->
+        <section class="internet-section">
+
+            <h2 class="internet-heading">
+                🧑‍💻 How to Search on the Internet
+            </h2>
+
+            <p class="internet-description">
+                Follow these simple steps to search
+                for information online.
+            </p>
+
+            <div class="process-grid">
+
+                <div class="process-card">
+                    <div class="process-icon">💻</div>
+                    <h3>Step 1</h3>
+                    <p>
+                        Open a web browser
+                        on your device.
+                    </p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">🔍</div>
+                    <h3>Step 2</h3>
+                    <p>
+                        Open a search engine
+                        or use its search bar.
+                    </p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">⌨️</div>
+                    <h3>Step 3</h3>
+                    <p>
+                        Type the topic
+                        you want to learn.
+                    </p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">📖</div>
+                    <h3>Step 4</h3>
+                    <p>
+                        Review the results
+                        and open a useful website.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Email Section -->
+        <section class="internet-section">
+
+            <h2 class="internet-heading">
+                📧 What is Email?
+            </h2>
+
+            <div class="internet-intro">
+
+                <div>
+                    <p>
+                        Email stands for Electronic Mail.
+                        It is a way to send and receive
+                        digital messages over the internet.
+                    </p>
+
+                    <p>
+                        Students can use email to communicate
+                        with teachers, receive school
+                        announcements and share documents.
+                    </p>
+
+                    <div class="internet-example">
+                        <strong>Example:</strong>
+                        A student can send an email
+                        to a teacher to ask a question
+                        about a school assignment.
+                    </div>
+                </div>
+
+                <div>
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdDhMthD0sbBccYv1h_jS75gVU_CeEZy-fXLj0s6qqBTEcWOmNQ8SxVdiv&s=10"
+                        alt="Email illustration">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Online Safety -->
+        <section class="internet-section">
+
+            <div class="safety-section">
+
+                <h2>🛡️ Stay Safe on the Internet</h2>
+
+                <p>
+                    The internet is useful for learning,
+                    but it is important to protect
+                    your personal information.
+                </p>
+
+                <div class="safety-grid">
+
+                    <div class="safety-card">
+                        <span>🔐</span>
+                        <div>
+                            <h3>Keep Passwords Private</h3>
+                            <p>
+                                Never share your password
+                                with strangers.
+                                Ask a trusted adult
+                                for help when needed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="safety-card">
+                        <span>🚫</span>
+                        <div>
+                            <h3>Avoid Unknown Links</h3>
+                            <p>
+                                Do not click suspicious
+                                links or download
+                                unknown files.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="safety-card">
+                        <span>👤</span>
+                        <div>
+                            <h3>Protect Personal Details</h3>
+                            <p>
+                                Do not share your address,
+                                phone number or school
+                                details publicly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="safety-card">
+                        <span>🧑‍🏫</span>
+                        <div>
+                            <h3>Ask a Trusted Adult</h3>
+                            <p>
+                                Tell a parent or teacher
+                                if you see something
+                                confusing or uncomfortable.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+                <p style="margin-top: 18px;">
+                    <a href="fake-messages.html" class="lesson-action">Play: spot fake messages</a>
+                </p>
+
+        </section>
+
+
+        <!-- Interactive Activity -->
+        <section class="internet-section">
+
+            <div class="activity-box">
+
+                <h2>🎯 Test Your Internet Knowledge</h2>
+
+                <p>
+                    Select the correct answer
+                    to test what you have learned.
+                </p>
+
+                <div class="activity-question" id="question">
+                    What is a web browser used for?
+                </div>
+
+                <div class="activity-options" id="options">
+
+                    <button class="activity-option"
+                            data-answer="0">
+                        A. To cook food
+                    </button>
+
+                    <button class="activity-option"
+                            data-answer="1">
+                        B. To open websites
+                    </button>
+
+                    <button class="activity-option"
+                            data-answer="2">
+                        C. To wash clothes
+                    </button>
+
+                    <button class="activity-option"
+                            data-answer="3">
+                        D. To print money
+                    </button>
+
+                </div>
+
+                <p class="activity-result"
+                   id="activityResult"
+                   aria-live="polite">
+                </p>
+
+                <button class="activity-btn"
+                        id="nextQuestion"
+                        style="display:none;">
+                    Next Question →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Learning Tip -->
+        <section class="internet-section">
+
+            <div class="internet-tip">
+                <h3>🌟 Learning Tip</h3>
+
+                <p>
+                    Try searching for educational
+                    information with your teacher
+                    or a trusted adult. Practice
+                    using the internet responsibly
+                    and always check if the information
+                    comes from a reliable source.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Navigation -->
+        <div class="lesson-navigation">
+
+            <a href="keyboard.html">
+                ← Previous: Keyboard & Mouse
+            </a>
+
+            <a href="quiz.html">
+                Next: Computer Quiz →
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Digital Pathshala.
+                Learning Computer Skills for Everyone.
+            </p>
+        </div>
+
+            <p class="creator-credit">Created by <strong>Pramod Vishnu Sargar</strong></p>
+    </footer>
+
+
+    <!-- Main JavaScript -->
+    <script src="../lang.js"></script>
+    <script src="../script.js"></script>
+
+
+    <!-- Internet Quiz JavaScript -->
+    <script>
+        const questions = [
+            {
+                question: "What is a web browser used for?",
+                options: [
+                    "A. To cook food",
+                    "B. To open websites",
+                    "C. To wash clothes",
+                    "D. To print money"
+                ],
+                answer: 1
+            },
+            {
+                question: "Which of these is a search engine?",
+                options: [
+                    "A. Google",
+                    "B. Paint",
+                    "C. Calculator",
+                    "D. Notepad"
+                ],
+                answer: 0
+            },
+            {
+                question: "What does email stand for?",
+                options: [
+                    "A. Easy Mail",
+                    "B. Electric Machine",
+                    "C. Electronic Mail",
+                    "D. Extra Message"
+                ],
+                answer: 2
+            },
+            {
+                question: "What should you do with your password?",
+                options: [
+                    "A. Share it publicly",
+                    "B. Post it online",
+                    "C. Tell strangers",
+                    "D. Keep it private"
+                ],
+                answer: 3
+            },
+            {
+                question: "What is the internet?",
+                options: [
+                    "A. A type of keyboard",
+                    "B. A worldwide network",
+                    "C. A computer mouse",
+                    "D. A printer"
+                ],
+                answer: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+
+        const questionElement =
+            document.getElementById("question");
+
+        const optionsElement =
+            document.getElementById("options");
+
+        const resultElement =
+            document.getElementById("activityResult");
+
+        const nextButton =
+            document.getElementById("nextQuestion");
+
+
+        function loadQuestion() {
+
+            answered = false;
+
+            const current = questions[currentQuestion];
+
+            Pathshala.showPack(questionElement, {
+                en: line("Question {n} of {total}: {question}", { n: currentQuestion + 1, total: questions.length, question: current.question }, "en"),
+                hi: line("Question {n} of {total}: {question}", { n: currentQuestion + 1, total: questions.length, question: line(current.question, {}, "hi") }, "hi"),
+                mr: line("Question {n} of {total}: {question}", { n: currentQuestion + 1, total: questions.length, question: line(current.question, {}, "mr") }, "mr")
+            });
+
+            optionsElement.innerHTML = "";
+
+            resultElement.textContent = "";
+            nextButton.style.display = "none";
+
+            current.options.forEach(function(option, index) {
+
+                const button = document.createElement("button");
+
+                button.className = "activity-option";
+                Pathshala.setText(button, option);
+
+                button.addEventListener("click", function() {
+                    checkAnswer(index, button);
+                });
+
+                optionsElement.appendChild(button);
+            });
+        }
+
+
+        function checkAnswer(selectedIndex, selectedButton) {
+
+            if (answered) return;
+
+            answered = true;
+
+            const correctAnswer =
+                questions[currentQuestion].answer;
+
+            const optionButtons =
+                optionsElement.querySelectorAll("button");
+
+            optionButtons.forEach(function(button) {
+                button.disabled = true;
+            });
+
+            if (selectedIndex === correctAnswer) {
+
+                score++;
+
+                selectedButton.classList.add("correct");
+
+                Pathshala.setText(resultElement, "🎉 Correct! Well done!");
+
+                resultElement.style.color = "#218344";
+
+            } else {
+
+                selectedButton.classList.add("incorrect");
+
+                optionButtons[correctAnswer]
+                    .classList.add("correct");
+
+                var answer = questions[currentQuestion].options[correctAnswer];
+                Pathshala.showPack(resultElement, {
+                    en: line("Not quite! The correct answer is {answer}", { answer: answer }, "en"),
+                    hi: line("Not quite! The correct answer is {answer}", { answer: line(answer, {}, "hi") }, "hi"),
+                    mr: line("Not quite! The correct answer is {answer}", { answer: line(answer, {}, "mr") }, "mr")
+                });
+
+                resultElement.style.color = "#c0392b";
+            }
+
+            nextButton.style.display = "inline-block";
+
+            if (currentQuestion === questions.length - 1) {
+                Pathshala.setText(nextButton, "See My Result →");
+            }
+        }
+
+
+        function showResult() {
+
+            Pathshala.setText(questionElement, "🏆 Your Quiz Result");
+
+            optionsElement.innerHTML = "";
+
+            Pathshala.showPack(resultElement, {
+                en: line("You scored {score} out of {total}!", { score: score, total: questions.length }, "en"),
+                hi: line("You scored {score} out of {total}!", { score: score, total: questions.length }, "hi"),
+                mr: line("You scored {score} out of {total}!", { score: score, total: questions.length }, "mr")
+            });
+
+            resultElement.style.color = "#1768b3";
+
+            Pathshala.setText(nextButton, "Try Again ↻");
+            nextButton.style.display = "inline-block";
+
+            currentQuestion = -1;
+        }
+
+
+        nextButton.addEventListener("click", function() {
+
+            if (currentQuestion === -1) {
+
+                currentQuestion = 0;
+                score = 0;
+                loadQuestion();
+
+                return;
+            }
+
+            if (currentQuestion < questions.length - 1) {
+
+                currentQuestion++;
+                loadQuestion();
+
+            } else {
+
+                showResult();
+            }
+        });
+
+
+        loadQuestion();
+    </script>
+
+</body>
+</html>

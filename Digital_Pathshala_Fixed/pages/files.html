@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Lab | Digital Pathshala</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo"><span class="logo-icon">💻</span> Digital <span class="logo-highlight">Pathshala</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#lessons">Lessons</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="files.html" class="active">File Lab</a></li>
+                <li><a href="fake-messages.html">Spot Fakes</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="progress.html">Certificate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tool-hero">
+        <p class="tagline">PRACTICE ON THIS COMPUTER</p>
+        <h1>File lab</h1>
+        <p class="hindi">फोल्डर बनाओ और फाइल भेजो</p>
+        <p class="section-description">A folder is a bag for your work. A file is one piece of work inside that bag.</p>
+    </section>
+
+    <main class="tool-wrap">
+        <p id="serverStatus" class="server-status">Checking the class server…</p>
+
+        <form class="name-bar no-print" id="nameBar" style="margin-bottom: 18px;">
+            <div>
+                <label for="studentName">Your name / आपका नाम</label>
+                <input id="studentName" maxlength="40" autocomplete="name" placeholder="Type your name">
+            </div>
+            <button class="btn" type="submit">Save</button>
+        </form>
+        <p id="nameNote" class="status" role="status"></p>
+
+        <div class="clue-grid" style="margin-bottom: 22px;">
+            <article class="clue-card">
+                <h3>1. Folder</h3>
+                <p>Give it a clear name, such as My Homework or Class 6 Drawings.</p>
+            </article>
+            <article class="clue-card">
+                <h3>2. File</h3>
+                <p>A file can be a text page, a picture, or a PDF. Send school work only.</p>
+            </article>
+            <article class="clue-card">
+                <h3>3. Send</h3>
+                <p>Sending here means the file is copied into the class folder on this computer.</p>
+            </article>
+        </div>
+
+        <div class="lab-grid">
+            <article class="panel">
+                <h2>Create a folder</h2>
+                <p class="hindi">नया फोल्डर बनाओ</p>
+                <ol class="steps">
+                    <li>Think of a short name.</li>
+                    <li>Type it in the box.</li>
+                    <li>Press Create folder.</li>
+                </ol>
+                <form class="stack-form" id="folderForm">
+                    <label for="folderName">Folder name</label>
+                    <input id="folderName" maxlength="40" required placeholder="My Homework">
+                    <button class="btn" type="submit">Create folder</button>
+                </form>
+                <div id="folderList" class="folder-list"></div>
+            </article>
+
+            <article class="panel">
+                <h2>Send a file</h2>
+                <p class="hindi">फाइल कक्षा में भेजो</p>
+                <form class="stack-form" id="fileForm">
+                    <label for="fileFolder">Choose a folder</label>
+                    <select id="fileFolder" required></select>
+                    <label for="homeworkFile">Choose a file</label>
+                    <input id="homeworkFile" type="file" accept=".txt,.pdf,.png,.jpg,.jpeg,.doc,.docx,.ppt,.pptx" required>
+                    <label for="fileNote">Note to the teacher</label>
+                    <input id="fileNote" maxlength="140" placeholder="This is my computer homework">
+                    <button class="btn btn-leaf" type="submit">Send file</button>
+                </form>
+                <div id="fileList" class="file-list"></div>
+                <p class="hint">Allowed files: txt, pdf, png, jpg, doc, ppt. Biggest size: 5 MB. Files stay on this class computer.</p>
+            </article>
+        </div>
+        <p id="labMessage" class="status" role="status"></p>
+        <p style="margin-top: 18px;"><a class="btn" href="fake-messages.html">Next: spot fake messages</a></p>
+    </main>
+
+    <footer>
+        <p>© 2026 Digital Pathshala. Basic computer skills for rural school students.</p>
+            <p class="creator-credit">Created by <strong>Pramod Vishnu Sargar</strong></p>
+    </footer>
+    <script src="../lang.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

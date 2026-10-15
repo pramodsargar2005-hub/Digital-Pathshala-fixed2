@@ -1,0 +1,14 @@
+{
+  "name": "digital-pathshala",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Basic computer skills for rural school students",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^2.4.0"
+  }
+}

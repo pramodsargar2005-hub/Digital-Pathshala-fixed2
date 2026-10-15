@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in | Digital Pathshala</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo"><span class="logo-icon">💻</span> Digital <span class="logo-highlight">Pathshala</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#lessons">Lessons</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="files.html">File Lab</a></li>
+                <li><a href="fake-messages.html">Spot Fakes</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="progress.html">Certificate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tool-hero">
+        <p class="tagline">SIGN IN</p>
+        <h1>Log in to your class</h1>
+        <p class="hindi">अपनी कक्षा में आओ</p>
+        <p class="section-description">Type the name and 4-number PIN you chose when you registered.</p>
+    </section>
+
+    <main class="tool-wrap">
+        <article class="panel auth-card">
+            <form class="stack-form" id="loginForm">
+                <label for="loginName">Your name</label>
+                <input id="loginName" maxlength="40" autocomplete="username" required placeholder="Type your name">
+                <label for="loginPin">4-number PIN</label>
+                <input id="loginPin" class="pin-input" inputmode="numeric" maxlength="4" autocomplete="current-password" required placeholder="1234">
+                <button class="btn" type="submit">Log in</button>
+            </form>
+            <p id="loginMessage" class="status" role="status"></p>
+            <p><a href="register.html">New here? Register</a></p>
+            <p><a href="teacher.html">I am the teacher</a></p>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2026 Digital Pathshala. Basic computer skills for rural school students.</p>
+            <p class="creator-credit">Created by <strong>Pramod Vishnu Sargar</strong></p>
+    </footer>
+    <script src="../lang.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

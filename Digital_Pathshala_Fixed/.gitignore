@@ -1,0 +1,6 @@
+node_modules/
+tmp-uploads/
+data/*.json
+data/*.tmp
+student-workspace/*
+!student-workspace/.gitkeep

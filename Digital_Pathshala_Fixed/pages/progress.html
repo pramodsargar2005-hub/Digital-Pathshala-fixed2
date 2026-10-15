@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certificate | Digital Pathshala</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="no-print">
+        <nav class="navbar">
+            <a href="../index.html" class="logo"><span class="logo-icon">💻</span> Digital <span class="logo-highlight">Pathshala</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#lessons">Lessons</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="files.html">File Lab</a></li>
+                <li><a href="fake-messages.html">Spot Fakes</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="progress.html" class="active">Certificate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tool-hero no-print">
+        <p class="tagline">YOUR PROGRESS</p>
+        <h1>Certificate</h1>
+        <p class="hindi">आपका प्रमाणपत्र</p>
+        <p class="section-description">Scores from the quiz, the file lab, and the fake-message game appear here.</p>
+    </section>
+
+    <main class="tool-wrap">
+        <p id="serverStatus" class="server-status no-print">Checking the class server…</p>
+        <form class="name-bar no-print" id="progressForm">
+            <div>
+                <label for="studentName">Your name / आपका नाम</label>
+                <input id="studentName" maxlength="40" autocomplete="name" required placeholder="Type your name">
+            </div>
+            <button class="btn" type="submit">Show certificate</button>
+        </form>
+        <p id="progressStatus" class="status no-print" role="status"></p>
+
+        <section class="certificate" id="certificate">
+            <p class="daily-kicker">Digital Pathshala</p>
+            <h2 id="certTitle">Ready to Begin</h2>
+            <p>This certifies that</p>
+            <p class="cert-name" id="certName">Student</p>
+            <p id="certNote">Finish an activity and your stars will appear here.</p>
+            <ul id="certList"></ul>
+            <p id="certDate"></p>
+        </section>
+
+        <p class="no-print" style="text-align:center;">
+            <button class="btn" id="printCert" type="button">Print certificate</button>
+        </p>
+    </main>
+
+    <footer class="no-print">
+        <p>© 2026 Digital Pathshala. Basic computer skills for rural school students.</p>
+            <p class="creator-credit">Created by <strong>Pramod Vishnu Sargar</strong></p>
+    </footer>
+    <script src="../lang.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

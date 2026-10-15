@@ -1,0 +1,591 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Basics | Digital Pathshala</title>
+
+    <meta name="description"
+          content="Learn computer basics, computer parts, hardware and software in simple language.">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Lesson Page CSS -->
+    <style>
+        .lesson-hero {
+            background: linear-gradient(135deg, #eaf5ff, #e8f8ee);
+            padding: 65px 8%;
+            text-align: center;
+        }
+
+        .lesson-hero .breadcrumb {
+            margin-bottom: 20px;
+            color: #1768b3;
+            font-size: 14px;
+        }
+
+        .lesson-hero h1 {
+            color: #163e65;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .lesson-hero h1 span {
+            color: #218344;
+        }
+
+        .lesson-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #52677c;
+            font-size: 16px;
+        }
+
+        .lesson-wrapper {
+            max-width: 1150px;
+            margin: auto;
+            padding: 55px 20px;
+        }
+
+        .lesson-intro {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 35px;
+            align-items: center;
+            margin-bottom: 55px;
+        }
+
+        .lesson-intro h2,
+        .content-heading {
+            font-size: 28px;
+            color: #163e65;
+            margin-bottom: 15px;
+        }
+
+        .lesson-intro p,
+        .topic-card p {
+            color: #60758a;
+            line-height: 1.8;
+        }
+
+        .lesson-intro img {
+            width: 100%;
+            border-radius: 18px;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin: 25px 0 55px;
+        }
+
+        .topic-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 22px rgba(0, 0, 0, 0.07);
+            border: 1px solid #edf1f5;
+        }
+
+        .topic-icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .topic-card h3 {
+            color: #163e65;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .example-box {
+            background: #eaf5ff;
+            padding: 15px;
+            border-left: 4px solid #1768b3;
+            border-radius: 8px;
+            margin-top: 15px;
+            color: #245078;
+        }
+
+        .parts-section {
+            margin-bottom: 55px;
+        }
+
+        .parts-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .part-card {
+            text-align: center;
+            padding: 22px 15px;
+            background: #f5f9fd;
+            border-radius: 14px;
+            border: 1px solid #e8eff7;
+        }
+
+        .part-card .part-icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .part-card h3 {
+            color: #163e65;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .part-card p {
+            color: #60758a;
+            font-size: 14px;
+        }
+
+        .tip-box {
+            background: #e8f8ee;
+            border-left: 5px solid #218344;
+            padding: 22px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .tip-box h3 {
+            color: #218344;
+            margin-bottom: 8px;
+        }
+
+        .knowledge-check {
+            background: #f5f1ff;
+            border-radius: 18px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .knowledge-check h2 {
+            color: #5d3b9b;
+            margin-bottom: 12px;
+        }
+
+        .knowledge-check p {
+            color: #60758a;
+            margin-bottom: 20px;
+        }
+
+        .lesson-action {
+            display: inline-block;
+            background: #1768b3;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .lesson-action:hover {
+            background: #104d88;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 700px) {
+            .lesson-hero {
+                padding: 45px 20px;
+            }
+
+            .lesson-hero h1 {
+                font-size: 32px;
+            }
+
+            .lesson-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .parts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .lesson-intro h2,
+            .content-heading {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .parts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">💻</span>
+                <span>Digital<span class="logo-highlight">Pathshala</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#lessons" class="active">Lessons</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="files.html">File Lab</a></li>
+                <li><a href="fake-messages.html">Spot Fakes</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="progress.html">Certificate</a></li>
+            </ul>
+
+            <a href="../index.html#lessons" class="nav-button">
+                All Lessons →
+            </a>
+
+        </nav>
+    </header>
+
+
+    <!-- Lesson Hero -->
+    <section class="lesson-hero">
+
+        <div class="breadcrumb">
+            <a href="../index.html" style="color: #1768b3;">Home</a>
+            / Computer Basics
+        </div>
+
+        <h1>💻 Computer <span>Basics</span></h1>
+
+        <p>
+            Welcome to your first computer lesson!
+            Let's understand what a computer is,
+            how it works and what its main parts do.
+        </p>
+
+    </section>
+
+
+    <!-- Main Content -->
+    <main class="lesson-wrapper">
+
+        <!-- Introduction -->
+        <section class="lesson-intro">
+
+            <div>
+                <h2>What is a Computer?</h2>
+
+                <p>
+                    A computer is an electronic machine that
+                    accepts data, processes it and gives us
+                    useful information.
+                </p>
+
+                <p style="margin-top: 12px;">
+                    We can use computers to study, write,
+                    draw pictures, calculate numbers,
+                    watch videos and communicate with others.
+                </p>
+
+                <div class="example-box">
+                    <strong>Example:</strong>
+                    When you type 5 + 5 into a calculator
+                    on a computer, it processes the numbers
+                    and displays the answer 10.
+                </div>
+            </div>
+
+            <div>
+                <img
+                    src="https://static.vecteezy.com/system/resources/thumbnails/048/629/081/small/screen-laptop-mockups-on-conference-table-with-free-photo.jpg"
+                    alt="Illustration of a computer">
+            </div>
+
+        </section>
+
+
+        <!-- Main Parts -->
+        <section class="parts-section">
+
+            <h2 class="content-heading">
+                🖥️ Main Parts of a Computer
+            </h2>
+
+            <p style="color: #60758a;">
+                A desktop computer has several important
+                parts that work together.
+            </p>
+
+            <div class="parts-grid">
+
+                <div class="part-card">
+                    <div class="part-icon">🖥️</div>
+                    <h3>Monitor</h3>
+                    <p>
+                        Displays text, pictures, videos
+                        and other information.
+                    </p>
+                </div>
+
+                <div class="part-card">
+                    <div class="part-icon">⌨️</div>
+                    <h3>Keyboard</h3>
+                    <p>
+                        Used to type letters,
+                        numbers and symbols.
+                    </p>
+                </div>
+
+                <div class="part-card">
+                    <div class="part-icon">🖱️</div>
+                    <h3>Mouse</h3>
+                    <p>
+                        Helps us point, click,
+                        select and move items.
+                    </p>
+                </div>
+
+                <div class="part-card">
+                    <div class="part-icon">🗄️</div>
+                    <h3>CPU</h3>
+                    <p>
+                        The processor executes
+                        instructions and processes data.
+                    </p>
+                </div>
+
+                <div class="part-card">
+                    <div class="part-icon">🔊</div>
+                    <h3>Speakers</h3>
+                    <p>
+                        Produce sound, music
+                        and other audio.
+                    </p>
+                </div>
+
+                <div class="part-card">
+                    <div class="part-icon">🖨️</div>
+                    <h3>Printer</h3>
+                    <p>
+                        Prints documents and
+                        pictures on paper.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Hardware and Software -->
+        <section>
+
+            <h2 class="content-heading">
+                ⚙️ Hardware and Software
+            </h2>
+
+            <div class="topic-grid">
+
+                <div class="topic-card">
+
+                    <div class="topic-icon">🖥️</div>
+
+                    <h3>Computer Hardware</h3>
+
+                    <p>
+                        Hardware means the physical parts
+                        of a computer that we can see
+                        and touch.
+                    </p>
+
+                    <div class="example-box">
+                        <strong>Examples:</strong>
+                        Monitor, keyboard, mouse,
+                        CPU, printer and speakers.
+                    </div>
+
+                </div>
+
+
+                <div class="topic-card">
+
+                    <div class="topic-icon">💿</div>
+
+                    <h3>Computer Software</h3>
+
+                    <p>
+                        Software is a set of programs
+                        or instructions that tells
+                        a computer what to do.
+                    </p>
+
+                    <div class="example-box">
+                        <strong>Examples:</strong>
+                        Windows, Paint, MS Word
+                        and web browsers.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Types of Computers -->
+        <section class="parts-section">
+
+            <h2 class="content-heading">
+                🧑‍💻 Types of Computers
+            </h2>
+
+            <div class="parts-grid">
+
+                <div class="part-card">
+                    <div class="part-icon">🖥️</div>
+                    <h3>Desktop</h3>
+                    <p>
+                        A computer designed
+                        to be used at a desk.
+                    </p>
+                </div>
+
+                <div class="part-card">
+                    <div class="part-icon">💻</div>
+                    <h3>Laptop</h3>
+                    <p>
+                        A portable computer
+                        that we can carry.
+                    </p>
+                </div>
+
+                <div class="part-card">
+                    <div class="part-icon">📱</div>
+                    <h3>Tablet</h3>
+                    <p>
+                        A portable touchscreen
+                        computing device.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Learning Tip -->
+        <section class="tip-box">
+
+            <h3>🌟 Learning Tip</h3>
+
+            <p>
+                Try to identify a monitor, keyboard,
+                mouse and CPU in your school computer lab.
+                Learning by practicing makes it easier
+                to remember computer parts.
+            </p>
+
+        </section>
+
+
+        <section class="parts-section">
+            <h2 class="content-heading">Watch and learn</h2>
+            <p style="color: #60758a;">
+                Watch this short video about the parts of a computer.
+                <span class="hindi">इस वीडियो में कंप्यूटर के भाग देखें।</span>
+            </p>
+            <div class="video-frame">
+                <iframe
+                    data-src-en="F-wdTl6-drY"
+                    data-src-hi="38WIs1RWEJU"
+                    data-src-mr="jSR79PPu5rs"
+                    src="https://www.youtube-nocookie.com/embed/F-wdTl6-drY"
+                    title="Basic parts of a computer"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <p style="margin-top: 16px;">
+                <a href="videos.html" class="lesson-action">More video lessons</a>
+            </p>
+        </section>
+
+        <!-- Knowledge Check -->
+        <section class="knowledge-check">
+
+            <h2>🎯 Test Your Knowledge</h2>
+
+            <p>
+                Have you understood the basic parts
+                of a computer? Try a short quiz
+                to check your knowledge.
+            </p>
+
+            <a href="quiz.html" class="lesson-action">
+                Start Computer Quiz →
+            </a>
+
+        </section>
+
+
+        <!-- Navigation Buttons -->
+        <div style="display: flex; justify-content: space-between;
+                    gap: 15px; flex-wrap: wrap;">
+
+            <a href="../index.html#lessons"
+               class="lesson-action">
+                ← All Lessons
+            </a>
+
+            <a href="keyboard.html"
+               class="lesson-action">
+                Next Lesson: Keyboard & Mouse →
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Digital Pathshala.
+                Learning Computer Skills for Everyone.
+            </p>
+        </div>
+
+            <p class="creator-credit">Created by <strong>Pramod Vishnu Sargar</strong></p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="../lang.js"></script>
+    <script src="../script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,991 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Keyboard & Mouse | Digital Pathshala</title>
+
+    <meta name="description"
+          content="Learn how to use a computer keyboard and mouse with simple explanations and interactive practice.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Keyboard Page CSS -->
+    <style>
+        .keyboard-hero {
+            background: linear-gradient(135deg, #eaf5ff, #e8f8ee);
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .keyboard-hero .breadcrumb {
+            margin-bottom: 18px;
+            color: #1768b3;
+            font-size: 14px;
+        }
+
+        .keyboard-hero h1 {
+            font-size: 42px;
+            color: #163e65;
+            margin-bottom: 15px;
+        }
+
+        .keyboard-hero h1 span {
+            color: #218344;
+        }
+
+        .keyboard-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #52677c;
+            line-height: 1.8;
+        }
+
+        .keyboard-wrapper {
+            max-width: 1150px;
+            margin: auto;
+            padding: 55px 20px;
+        }
+
+        .keyboard-section {
+            margin-bottom: 55px;
+        }
+
+        .keyboard-heading {
+            color: #163e65;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .keyboard-description {
+            color: #60758a;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .keyboard-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .keyboard-intro img {
+            width: 100%;
+            border-radius: 18px;
+        }
+
+        .keyboard-intro p {
+            color: #60758a;
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
+
+        .keyboard-types {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .key-card {
+            background: #ffffff;
+            border: 1px solid #edf1f5;
+            border-radius: 15px;
+            padding: 23px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .key-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .key-icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .key-card h3 {
+            color: #163e65;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .key-card p {
+            color: #60758a;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .key-example {
+            display: inline-block;
+            background: #eaf5ff;
+            color: #1768b3;
+            border-radius: 6px;
+            padding: 5px 10px;
+            margin-top: 12px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* Keyboard keys display */
+        .keyboard-demo {
+            background: #163e65;
+            padding: 25px;
+            border-radius: 18px;
+            margin-top: 25px;
+            overflow-x: auto;
+        }
+
+        .keyboard-row {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-bottom: 7px;
+            min-width: 560px;
+        }
+
+        .key {
+            background: #ffffff;
+            color: #163e65;
+            border: none;
+            border-radius: 6px;
+            min-width: 38px;
+            height: 40px;
+            padding: 0 8px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 3px 0 #b5c4d4;
+            cursor: pointer;
+            transition: 0.15s;
+        }
+
+        .key:hover {
+            background: #bfe5ff;
+            transform: translateY(-2px);
+        }
+
+        .key:active,
+        .key.selected {
+            background: #8be0a5;
+            box-shadow: 0 1px 0 #61a879;
+            transform: translateY(2px);
+        }
+
+        .key.wide {
+            min-width: 65px;
+        }
+
+        .key.extra-wide {
+            min-width: 85px;
+        }
+
+        .key.space {
+            width: 240px;
+        }
+
+        .keyboard-output {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+            margin-top: 20px;
+            color: #163e65;
+        }
+
+        .keyboard-output p {
+            color: #60758a;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .keyboard-output h3 {
+            color: #1768b3;
+        }
+
+        /* Mouse cards */
+        .mouse-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .mouse-card {
+            background: #f5f9fd;
+            padding: 25px 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e8eff7;
+        }
+
+        .mouse-card .mouse-icon {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .mouse-card h3 {
+            color: #163e65;
+            margin-bottom: 10px;
+        }
+
+        .mouse-card p {
+            color: #60758a;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Typing practice */
+        .practice-box {
+            background: linear-gradient(135deg, #f0f7ff, #effbf2);
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .practice-box h2 {
+            color: #163e65;
+            margin-bottom: 12px;
+        }
+
+        .practice-box p {
+            color: #60758a;
+            line-height: 1.8;
+        }
+
+        .practice-word {
+            background: #ffffff;
+            border: 2px dashed #8bbce8;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 25px;
+            font-weight: 700;
+            color: #1768b3;
+            margin: 22px 0;
+            letter-spacing: 2px;
+        }
+
+        .practice-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 15px;
+            border: 2px solid #c9dcec;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 16px;
+            outline: none;
+            margin: 5px 0 15px;
+        }
+
+        .practice-input:focus {
+            border-color: #1768b3;
+        }
+
+        .practice-btn {
+            background: #1768b3;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .practice-btn:hover {
+            background: #104d88;
+        }
+
+        .practice-result {
+            min-height: 30px;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        .success-message {
+            color: #218344;
+        }
+
+        .error-message {
+            color: #c0392b;
+        }
+
+        /* Tips */
+        .keyboard-tip {
+            background: #e8f8ee;
+            border-left: 5px solid #218344;
+            padding: 22px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .keyboard-tip h3 {
+            color: #218344;
+            margin-bottom: 8px;
+        }
+
+        .keyboard-tip p {
+            color: #52677c;
+            line-height: 1.8;
+        }
+
+        .lesson-navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .lesson-navigation a {
+            display: inline-block;
+            background: #1768b3;
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .lesson-navigation a:hover {
+            background: #104d88;
+        }
+
+        @media (max-width: 750px) {
+            .keyboard-hero h1 {
+                font-size: 32px;
+            }
+
+            .keyboard-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .keyboard-types {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .mouse-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .keyboard-heading {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .keyboard-types {
+                grid-template-columns: 1fr;
+            }
+
+            .practice-box {
+                padding: 22px 15px;
+            }
+
+            .practice-word {
+                font-size: 20px;
+            }
+
+            .lesson-navigation {
+                flex-direction: column;
+            }
+
+            .lesson-navigation a {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">💻</span>
+                <span>Digital<span class="logo-highlight">Pathshala</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#lessons">Lessons</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="files.html">File Lab</a></li>
+                <li><a href="fake-messages.html">Spot Fakes</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="progress.html">Certificate</a></li>
+            </ul>
+
+            <a href="../index.html#lessons" class="nav-button">
+                All Lessons →
+            </a>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="keyboard-hero">
+
+        <div class="breadcrumb">
+            <a href="../index.html" style="color: #1768b3;">Home</a>
+            / Keyboard & Mouse
+        </div>
+
+        <h1>⌨️ Keyboard <span>& Mouse</span></h1>
+
+        <p>
+            Learn how to use a keyboard and mouse.
+            Practice typing, understand important keys
+            and discover how to control a computer easily.
+        </p>
+
+    </section>
+
+
+    <!-- Main Content -->
+    <main class="keyboard-wrapper">
+
+
+        <!-- Introduction -->
+        <section class="keyboard-section">
+
+            <div class="keyboard-intro">
+
+                <div>
+                    <h2 class="keyboard-heading">
+                        What is a Keyboard?
+                    </h2>
+
+                    <p>
+                        A keyboard is an input device
+                        used to enter letters, numbers
+                        and symbols into a computer.
+                    </p>
+
+                    <p>
+                        We use a keyboard to type our names,
+                        write documents, enter numbers
+                        and give instructions to a computer.
+                    </p>
+
+                    <div class="keyboard-tip">
+                        <h3>💡 Did You Know?</h3>
+                        <p>
+                            The keyboard is one of the most
+                            commonly used input devices
+                            in a computer.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <img
+                        src="https://t3.ftcdn.net/jpg/01/82/47/28/360_F_182472844_YJTLFE1dmdK0KJWF6AdxU5A24eInzXxN.jpg"
+                        alt="Computer keyboard illustration">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Keyboard Keys -->
+        <section class="keyboard-section">
+
+            <h2 class="keyboard-heading">
+                🔤 Different Types of Keyboard Keys
+            </h2>
+
+            <p class="keyboard-description">
+                A keyboard has different types of keys.
+                Each key has a specific purpose.
+            </p>
+
+            <div class="keyboard-types">
+
+                <div class="key-card">
+                    <div class="key-icon">🔠</div>
+                    <h3>Alphabet Keys</h3>
+                    <p>
+                        These keys are used to type
+                        letters from A to Z.
+                    </p>
+                    <span class="key-example">A, B, C ... Z</span>
+                </div>
+
+                <div class="key-card">
+                    <div class="key-icon">🔢</div>
+                    <h3>Number Keys</h3>
+                    <p>
+                        These keys are used to type
+                        numbers from 0 to 9.
+                    </p>
+                    <span class="key-example">0, 1, 2 ... 9</span>
+                </div>
+
+                <div class="key-card">
+                    <div class="key-icon">↵</div>
+                    <h3>Enter Key</h3>
+                    <p>
+                        Used to start a new line
+                        or confirm an action.
+                    </p>
+                    <span class="key-example">Enter</span>
+                </div>
+
+                <div class="key-card">
+                    <div class="key-icon">⬅️</div>
+                    <h3>Backspace Key</h3>
+                    <p>
+                        Deletes the character
+                        to the left of the cursor.
+                    </p>
+                    <span class="key-example">Backspace</span>
+                </div>
+
+                <div class="key-card">
+                    <div class="key-icon">⇧</div>
+                    <h3>Shift Key</h3>
+                    <p>
+                        Helps type capital letters
+                        and upper symbols.
+                    </p>
+                    <span class="key-example">Shift</span>
+                </div>
+
+                <div class="key-card">
+                    <div class="key-icon">␣</div>
+                    <h3>Spacebar</h3>
+                    <p>
+                        Adds a blank space between
+                        words while typing.
+                    </p>
+                    <span class="key-example">Space</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Interactive Keyboard -->
+        <section class="keyboard-section">
+
+            <h2 class="keyboard-heading">
+                🎮 Interactive Keyboard
+            </h2>
+
+            <p class="keyboard-description">
+                Click any key below to learn what
+                it does. This is a visual keyboard
+                demonstration.
+            </p>
+
+            <div class="keyboard-demo">
+
+                <div class="keyboard-row">
+                    <button class="key" data-key="Esc">Esc</button>
+                    <button class="key" data-key="F1">F1</button>
+                    <button class="key" data-key="F2">F2</button>
+                    <button class="key" data-key="F3">F3</button>
+                    <button class="key" data-key="F4">F4</button>
+                    <button class="key" data-key="F5">F5</button>
+                    <button class="key" data-key="F6">F6</button>
+                    <button class="key" data-key="F7">F7</button>
+                    <button class="key" data-key="F8">F8</button>
+                    <button class="key" data-key="F9">F9</button>
+                    <button class="key" data-key="F10">F10</button>
+                </div>
+
+                <div class="keyboard-row">
+                    <button class="key" data-key="1">1</button>
+                    <button class="key" data-key="2">2</button>
+                    <button class="key" data-key="3">3</button>
+                    <button class="key" data-key="4">4</button>
+                    <button class="key" data-key="5">5</button>
+                    <button class="key" data-key="6">6</button>
+                    <button class="key" data-key="7">7</button>
+                    <button class="key" data-key="8">8</button>
+                    <button class="key" data-key="9">9</button>
+                    <button class="key" data-key="0">0</button>
+                    <button class="key wide" data-key="Backspace">⌫</button>
+                </div>
+
+                <div class="keyboard-row">
+                    <button class="key wide" data-key="Tab">Tab</button>
+                    <button class="key" data-key="Q">Q</button>
+                    <button class="key" data-key="W">W</button>
+                    <button class="key" data-key="E">E</button>
+                    <button class="key" data-key="R">R</button>
+                    <button class="key" data-key="T">T</button>
+                    <button class="key" data-key="Y">Y</button>
+                    <button class="key" data-key="U">U</button>
+                    <button class="key" data-key="I">I</button>
+                    <button class="key" data-key="O">O</button>
+                    <button class="key" data-key="P">P</button>
+                </div>
+
+                <div class="keyboard-row">
+                    <button class="key extra-wide" data-key="Caps Lock">Caps</button>
+                    <button class="key" data-key="A">A</button>
+                    <button class="key" data-key="S">S</button>
+                    <button class="key" data-key="D">D</button>
+                    <button class="key" data-key="F">F</button>
+                    <button class="key" data-key="G">G</button>
+                    <button class="key" data-key="H">H</button>
+                    <button class="key" data-key="J">J</button>
+                    <button class="key" data-key="K">K</button>
+                    <button class="key" data-key="L">L</button>
+                    <button class="key wide" data-key="Enter">Enter</button>
+                </div>
+
+                <div class="keyboard-row">
+                    <button class="key extra-wide" data-key="Shift">Shift</button>
+                    <button class="key" data-key="Z">Z</button>
+                    <button class="key" data-key="X">X</button>
+                    <button class="key" data-key="C">C</button>
+                    <button class="key" data-key="V">V</button>
+                    <button class="key" data-key="B">B</button>
+                    <button class="key" data-key="N">N</button>
+                    <button class="key" data-key="M">M</button>
+                    <button class="key extra-wide" data-key="Delete">Del</button>
+                </div>
+
+                <div class="keyboard-row">
+                    <button class="key wide" data-key="Ctrl">Ctrl</button>
+                    <button class="key wide" data-key="Alt">Alt</button>
+                    <button class="key space" data-key="Spacebar">Space</button>
+                    <button class="key wide" data-key="Alt">Alt</button>
+                    <button class="key wide" data-key="Ctrl">Ctrl</button>
+                </div>
+
+                <div class="keyboard-output">
+                    <p>Selected key</p>
+                    <h3 id="keyName">Click any key!</h3>
+                    <p id="keyDescription">
+                        The key's function will appear here.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Mouse Section -->
+        <section class="keyboard-section">
+
+            <div class="keyboard-intro">
+
+                <div>
+                    <h2 class="keyboard-heading">
+                        🖱️ What is a Mouse?
+                    </h2>
+
+                    <p>
+                        A mouse is an input device
+                        used to move the pointer
+                        on a computer screen.
+                    </p>
+
+                    <p>
+                        It helps us select files,
+                        open applications, click
+                        buttons and drag objects.
+                    </p>
+                </div>
+
+                <div>
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY1Cd8Tfs1yb6uw7nGIpwI0XVFrpn7esXrY-M8JpgfsA&s=10"
+                        alt="Computer mouse illustration">
+                </div>
+
+            </div>
+
+            <div class="mouse-grid">
+
+                <div class="mouse-card">
+                    <div class="mouse-icon">👆</div>
+                    <h3>Left Click</h3>
+                    <p>
+                        Used to select files,
+                        buttons and objects.
+                        Double-clicking can open
+                        files and applications.
+                    </p>
+                </div>
+
+                <div class="mouse-card">
+                    <div class="mouse-icon">🖱️</div>
+                    <h3>Right Click</h3>
+                    <p>
+                        Opens a menu with
+                        additional options
+                        for a selected item.
+                    </p>
+                </div>
+
+                <div class="mouse-card">
+                    <div class="mouse-icon">🔄</div>
+                    <h3>Scroll Wheel</h3>
+                    <p>
+                        Used to move up and down
+                        through a document
+                        or webpage.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Typing Practice -->
+        <section class="keyboard-section">
+
+            <div class="practice-box">
+
+                <h2>⌨️ Let's Practice Typing!</h2>
+
+                <p>
+                    Type the word shown below
+                    into the text box.
+                    This activity will help you
+                    improve your typing skills.
+                </p>
+
+                <div class="practice-word" id="practiceWord">
+                    COMPUTER
+                </div>
+
+                <input
+                    type="text"
+                    id="typingInput"
+                    class="practice-input"
+                    placeholder="Type the word here..."
+                    autocomplete="off"
+                    aria-label="Type the displayed word">
+
+                <br>
+
+                <button class="practice-btn" id="checkTyping">
+                    Check Answer
+                </button>
+
+                <button class="practice-btn" id="nextWord"
+                        style="background: #218344; margin-left: 8px;">
+                    Next Word →
+                </button>
+
+                <p class="practice-result" id="practiceResult"
+                   aria-live="polite">
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Tips -->
+        <section class="keyboard-section">
+
+            <div class="keyboard-tip">
+                <h3>🌟 Tips for Beginners</h3>
+
+                <p>
+                    ✔ Sit comfortably while using a computer.
+                    <br>
+                    ✔ Keep your fingers relaxed while typing.
+                    <br>
+                    ✔ Practice typing every day.
+                    <br>
+                    ✔ Use the mouse gently.
+                    <br>
+                    ✔ Take short breaks while learning.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Navigation -->
+        <div class="lesson-navigation">
+
+            <a href="lessons.html">
+                ← Previous: Computer Basics
+            </a>
+
+            <a href="internet.html">
+                Next: Internet Basics →
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>
+                © 2026 Digital Pathshala.
+                Learning Computer Skills for Everyone.
+            </p>
+        </div>
+            <p class="creator-credit">Created by <strong>Pramod Vishnu Sargar</strong></p>
+    </footer>
+
+
+    <!-- Main JavaScript -->
+    <script src="../lang.js"></script>
+    <script src="../script.js"></script>
+
+    <!-- Keyboard Page JavaScript -->
+    <script>
+        // Interactive Keyboard
+
+        const keys = document.querySelectorAll(".key");
+        const keyName = document.getElementById("keyName");
+        const keyDescription =
+            document.getElementById("keyDescription");
+
+        const keyInfo = {
+            "Esc": "The Escape key is commonly used to cancel or exit certain actions.",
+            "Enter": "The Enter key confirms actions or starts a new line in text.",
+            "Backspace": "Deletes the character to the left of the cursor.",
+            "Delete": "Deletes the selected item or the character to the right of the cursor.",
+            "Spacebar": "Adds a blank space between words.",
+            "Shift": "Used with other keys to type capital letters and upper symbols.",
+            "Tab": "Moves to the next field or creates an indentation in some programs.",
+            "Caps Lock": "Turns capital letter typing on or off.",
+            "Ctrl": "Used with other keys for shortcuts.",
+            "Alt": "Used with other keys for additional commands."
+        };
+
+        keys.forEach(function(key) {
+            key.addEventListener("click", function() {
+
+                keys.forEach(function(k) {
+                    k.classList.remove("selected");
+                });
+
+                key.classList.add("selected");
+
+                const selectedKey = key.dataset.key;
+
+                keyName.textContent = selectedKey;
+
+                if (keyInfo[selectedKey]) {
+                    Pathshala.setText(keyDescription, keyInfo[selectedKey]);
+                } else {
+                    Pathshala.fill(keyDescription, "This key is used to type {key} or perform a keyboard action.", { key: selectedKey });
+                }
+            });
+        });
+
+
+        // Typing Practice
+
+        const words = [
+            "COMPUTER",
+            "KEYBOARD",
+            "MOUSE",
+            "MONITOR",
+            "INTERNET",
+            "STUDENT",
+            "SCHOOL",
+            "LEARNING"
+        ];
+
+        let currentWordIndex = 0;
+
+        const practiceWord =
+            document.getElementById("practiceWord");
+
+        const typingInput =
+            document.getElementById("typingInput");
+
+        const practiceResult =
+            document.getElementById("practiceResult");
+
+        const checkTyping =
+            document.getElementById("checkTyping");
+
+        const nextWord =
+            document.getElementById("nextWord");
+
+
+        // Check typed answer
+        checkTyping.addEventListener("click", function() {
+
+            const userAnswer = typingInput.value.trim();
+            const correctAnswer = words[currentWordIndex];
+
+            practiceResult.className = "practice-result";
+
+            if (userAnswer.toUpperCase() === correctAnswer) {
+
+                Pathshala.setText(practiceResult, "🎉 Excellent! Your answer is correct!");
+
+                practiceResult.classList.add("success-message");
+
+            } else {
+
+                Pathshala.setText(practiceResult, "❌ Try again! Check the spelling.");
+
+                practiceResult.classList.add("error-message");
+            }
+
+        });
+
+
+        // Load next word
+        nextWord.addEventListener("click", function() {
+
+            currentWordIndex =
+                (currentWordIndex + 1) % words.length;
+
+            practiceWord.textContent =
+                words[currentWordIndex];
+
+            typingInput.value = "";
+            practiceResult.textContent = "";
+            typingInput.focus();
+
+        });
+
+
+        // Allow Enter key to check the answer
+        typingInput.addEventListener("keydown", function(event) {
+
+            if (event.key === "Enter") {
+                checkTyping.click();
+            }
+
+        });
+    </script>
+
+</body>
+</html>

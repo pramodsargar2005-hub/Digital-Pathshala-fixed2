@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Pathshala | Basic Computer Skills</title>
+    <meta name="author" content="Pramod Vishnu Sargar">
+    <meta name="description" content="A friendly computer class for rural school students: lessons, videos, file practice, and spotting fake messages.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#lessons">Skip to lessons</a>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💻</span>
+                Digital <span class="logo-highlight">Pathshala</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#lessons">Lessons</a></li>
+                <li><a href="pages/videos.html">Videos</a></li>
+                <li><a href="pages/files.html">File Lab</a></li>
+                <li><a href="pages/fake-messages.html">Spot Fakes</a></li>
+                <li><a href="pages/quiz.html">Quiz</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">A CLASSROOM FOR FIRST COMPUTERS</p>
+            <h1>Learn computer skills <span>the joyful way</span></h1>
+            <p class="hindi">कंप्यूटर सीखो, आसान भाषा में</p>
+            <p class="hero-description">
+                Digital Pathshala is for rural school students.
+                Tap the computer, watch short videos, make a folder,
+                send a file, and learn which messages are fake.
+            </p>
+            <div class="hero-actions">
+                <a href="#lessons" class="btn">Start learning</a>
+                <a href="pages/videos.html" class="btn btn-line">Watch videos</a>
+                <a href="pages/login.html" class="btn btn-line">Log in</a>
+            </div>
+
+            <form class="name-bar" id="nameBar">
+                <div>
+                    <label for="studentName">Your name / आपका नाम</label>
+                    <input id="studentName" maxlength="40" autocomplete="name" placeholder="Type your name">
+                </div>
+                <button class="btn" type="submit">Save</button>
+            </form>
+            <p id="nameNote" class="status" role="status"></p>
+        </div>
+
+        <div class="hero-image">
+            <div class="computer-art">
+                <svg viewBox="0 0 520 360" role="img" aria-label="A classroom computer. Tap a part to learn its name.">
+                    <rect width="520" height="360" rx="24" fill="#e7f6ff"/>
+                    <circle cx="78" cy="58" r="26" fill="#ffd166"/>
+                    <path d="M40 250 C120 210, 180 280, 250 240 C330 190, 390 250, 490 210 L490 320 L40 320 Z" fill="#b7e4c7"/>
+                    <rect x="36" y="286" width="448" height="22" rx="8" fill="#c9854a"/>
+                    <rect x="70" y="308" width="16" height="40" fill="#a56b38"/>
+                    <rect x="430" y="308" width="16" height="40" fill="#a56b38"/>
+                    <g id="partMonitor" class="part-btn" tabindex="0" role="button" aria-label="Monitor">
+                        <rect x="118" y="62" width="230" height="148" rx="12" fill="#1c3144"/>
+                        <rect x="132" y="76" width="202" height="112" rx="6" fill="#8fd3f4"/>
+                        <rect x="210" y="210" width="46" height="16" fill="#1c3144"/>
+                        <rect x="184" y="226" width="98" height="10" rx="4" fill="#1c3144"/>
+                    </g>
+                    <g id="partCpu" class="part-btn" tabindex="0" role="button" aria-label="CPU">
+                        <rect x="390" y="132" width="78" height="140" rx="10" fill="#245078"/>
+                        <circle cx="429" cy="160" r="7" fill="#8be0a5"/>
+                        <rect x="408" y="188" width="42" height="8" rx="2" fill="#b9e2f5"/>
+                        <rect x="408" y="206" width="42" height="8" rx="2" fill="#b9e2f5"/>
+                    </g>
+                    <g id="partKeyboard" class="part-btn" tabindex="0" role="button" aria-label="Keyboard">
+                        <rect x="126" y="248" width="196" height="28" rx="6" fill="#f7fbff" stroke="#1c3144" stroke-width="3"/>
+                    </g>
+                    <g id="partMouse" class="part-btn" tabindex="0" role="button" aria-label="Mouse">
+                        <rect x="344" y="246" width="26" height="38" rx="12" fill="#f7fbff" stroke="#1c3144" stroke-width="3"/>
+                    </g>
+                    <circle cx="70" cy="236" r="14" fill="#ef8f2f"/>
+                    <rect x="67" y="250" width="6" height="28" rx="3" fill="#1f8a70"/>
+                </svg>
+                <div class="part-picker">
+                    <button type="button" data-part="partMonitor">Monitor</button>
+                    <button type="button" data-part="partKeyboard">Keyboard</button>
+                    <button type="button" data-part="partMouse">Mouse</button>
+                    <button type="button" data-part="partCpu">CPU</button>
+                </div>
+                <div class="part-panel">
+                    <h2 id="partTitle">Monitor</h2>
+                    <p class="hindi" id="partHindi">मॉनिटर</p>
+                    <p id="partText"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="word" style="padding: 10px 8% 36px;">
+        <div class="daily-word" id="dailyWord">
+            <div>
+                <p class="daily-kicker">TODAY'S COMPUTER WORD</p>
+                <h2 data-word>Folder</h2>
+                <p class="hindi" data-hi>फोल्डर</p>
+            </div>
+            <p data-meaning>A named place that keeps files together.</p>
+        </div>
+    </section>
+
+    <section class="lessons" id="lessons">
+        <h2>Your learning path</h2>
+        <p class="hindi">सीखने का रास्ता</p>
+        <p class="section-description">Follow the steps, or jump to the one you want to try.</p>
+        <ol class="path">
+            <li><a href="pages/lessons.html"><span>Step 1</span>Parts</a></li>
+            <li><a href="pages/keyboard.html"><span>Step 2</span>Keys</a></li>
+            <li><a href="pages/internet.html"><span>Step 3</span>Internet</a></li>
+            <li><a href="pages/videos.html"><span>Step 4</span>Videos</a></li>
+            <li><a href="pages/files.html"><span>Step 5</span>Files</a></li>
+            <li><a href="pages/fake-messages.html"><span>Step 6</span>Stay safe</a></li>
+            <li><a href="pages/quiz.html"><span>Step 7</span>Quiz</a></li>
+        </ol>
+
+        <div class="lesson-container" style="margin-top: 34px;">
+            <article class="lesson-card">
+                <div class="lesson-icon">🖥️</div>
+                <h3>Computer Basics</h3>
+                <p>Learn what a computer is, its parts, hardware, and software.</p>
+                <a href="pages/lessons.html" class="lesson-btn">Learn more</a>
+            </article>
+            <article class="lesson-card">
+                <div class="lesson-icon">⌨️</div>
+                <h3>Keyboard &amp; Mouse</h3>
+                <p>Press keys, click, and practise typing short words.</p>
+                <a href="pages/keyboard.html" class="lesson-btn">Learn more</a>
+            </article>
+            <article class="lesson-card">
+                <div class="lesson-icon">🌐</div>
+                <h3>Internet Basics</h3>
+                <p>Open a browser, search, and stay careful online.</p>
+                <a href="pages/internet.html" class="lesson-btn">Learn more</a>
+            </article>
+            <article class="lesson-card">
+                <div class="lesson-icon">▶️</div>
+                <h3>Video Class <span class="badge">New</span></h3>
+                <p>Watch short YouTube lessons about computer parts and first steps.</p>
+                <a href="pages/videos.html" class="lesson-btn">Watch</a>
+            </article>
+            <article class="lesson-card">
+                <div class="lesson-icon">📁</div>
+                <h3>File Lab <span class="badge">New</span></h3>
+                <p>Create a folder and send a homework file to the class computer.</p>
+                <a href="pages/files.html" class="lesson-btn">Try the lab</a>
+            </article>
+            <article class="lesson-card">
+                <div class="lesson-icon">🕵️</div>
+                <h3>Spot Fake Messages <span class="badge">New</span></h3>
+                <p>Decide which messages are real school notes and which are tricks.</p>
+                <a href="pages/fake-messages.html" class="lesson-btn">Play</a>
+            </article>
+            <article class="lesson-card">
+                <div class="lesson-icon">📝</div>
+                <h3>Fun Quiz</h3>
+                <p>Answer questions and save your score for the certificate.</p>
+                <a href="pages/quiz.html" class="lesson-btn">Start quiz</a>
+            </article>
+            <article class="lesson-card">
+                <div class="lesson-icon">🏅</div>
+                <h3>My Certificate <span class="badge">New</span></h3>
+                <p>See your stars and print a Computer Explorer certificate.</p>
+                <a href="pages/progress.html" class="lesson-btn">Open</a>
+            </article>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About this pathshala</h2>
+        <p>
+            Basic Computer Skills helps students who are meeting a computer
+            for the first time. The words stay short. The practice happens
+            on this class computer: folders, files, videos, and a game about
+            fake messages. A teacher can sit beside the student and press
+            the buttons together.
+        </p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Class notebook</h2>
+        <p class="hindi">शिक्षक के लिए एक नोट लिखें</p>
+        <p>Tell your teacher what you want to learn next. The note stays on this computer.</p>
+        <form class="stack-form contact-card" id="contactForm">
+            <label for="contactName">Your name</label>
+            <input id="contactName" maxlength="40" autocomplete="name" required>
+            <label for="contactClass">Class</label>
+            <input id="contactClass" maxlength="40" placeholder="Class 6">
+            <label for="contactMessage">Your message</label>
+            <textarea id="contactMessage" rows="4" maxlength="500" required placeholder="I want to practise typing."></textarea>
+            <button class="btn" type="submit">Send note</button>
+        </form>
+        <p id="contactResult" class="status" role="status"></p>
+    </section>
+
+    <footer>
+        <p>© 2026 Digital Pathshala. Basic computer skills for rural school students.</p>
+            <p class="creator-credit">Created by <strong>Pramod Vishnu Sargar</strong></p>
+    </footer>
+
+    <script src="lang.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

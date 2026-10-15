@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spot Fake Messages | Digital Pathshala</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo"><span class="logo-icon">💻</span> Digital <span class="logo-highlight">Pathshala</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#lessons">Lessons</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="files.html">File Lab</a></li>
+                <li><a href="fake-messages.html" class="active">Spot Fakes</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="progress.html">Certificate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tool-hero">
+        <p class="tagline">STAY SAFE</p>
+        <h1>Spot the fake message</h1>
+        <p class="hindi">नकली संदेश पहचानो</p>
+        <p class="section-description">Some messages want your OTP, money, or a quick click. A real school note does not.</p>
+    </section>
+
+    <main class="tool-wrap">
+        <p id="serverStatus" class="server-status">Checking the class server…</p>
+
+        <form class="name-bar" id="nameBar" style="margin-bottom: 18px;">
+            <div>
+                <label for="studentName">Your name / आपका नाम</label>
+                <input id="studentName" maxlength="40" autocomplete="name" placeholder="Type your name">
+            </div>
+            <button class="btn" type="submit">Save</button>
+        </form>
+        <p id="nameNote" class="status" role="status"></p>
+
+        <div class="clue-grid" style="margin-bottom: 26px;">
+            <article class="clue-card">
+                <h3>Secret</h3>
+                <p>OTP, password, PIN, or Aadhaar. Do not send these in a reply.</p>
+            </article>
+            <article class="clue-card">
+                <h3>Prize</h3>
+                <p>Money or a free gift you did not enter is usually a trick.</p>
+            </article>
+            <article class="clue-card">
+                <h3>Hurry</h3>
+                <p>If it says “now” and pushes a strange link, stop and ask a teacher.</p>
+            </article>
+        </div>
+
+        <section id="detectiveApp">
+            <div class="phone" aria-live="polite">
+                <div class="phone-screen">
+                    <p class="count" id="msgCount">Message</p>
+                    <p id="msgFrom"><strong>From:</strong></p>
+                    <p class="bubble" id="msgText">Loading a practice message…</p>
+                </div>
+            </div>
+            <div class="choice-row">
+                <button class="btn btn-leaf" type="button" data-choice="real">This is real</button>
+                <button class="btn" type="button" data-choice="fake" style="background:#d4536a;">This is fake</button>
+            </div>
+            <p id="msgWhy" class="status" role="status"></p>
+            <p style="text-align:center;">
+                <button class="btn btn-line" id="msgNext" type="button" hidden>Next message</button>
+            </p>
+        </section>
+
+        <p id="detectiveResult" class="status" hidden></p>
+
+        <article class="panel" style="margin-top: 28px;">
+            <h2>Check a message</h2>
+            <p class="hindi">संदेश चिपकाकर जाँचो</p>
+            <p>Paste a message you are not sure about. This helper looks for common tricks. It can be wrong, so still ask a teacher.</p>
+            <form class="stack-form" id="scanForm">
+                <label for="scanText">Message</label>
+                <textarea id="scanText" rows="5" maxlength="1000" placeholder="Paste the message here"></textarea>
+                <div class="hero-actions">
+                    <button class="btn" type="submit">Check message</button>
+                    <button class="btn btn-line" id="sampleMessage" type="button">Try a sample</button>
+                </div>
+            </form>
+            <div id="scanResult" class="scan-result"></div>
+        </article>
+
+        <p style="margin-top: 18px;"><a class="btn" href="quiz.html">Next: take the quiz</a></p>
+    </main>
+
+    <footer>
+        <p>© 2026 Digital Pathshala. Basic computer skills for rural school students.</p>
+            <p class="creator-credit">Created by <strong>Pramod Vishnu Sargar</strong></p>
+    </footer>
+    <script src="../lang.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
